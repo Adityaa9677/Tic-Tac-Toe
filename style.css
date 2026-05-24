@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -10,81 +11,81 @@ body{
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 h1{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 55px;
     background: linear-gradient(90deg, #4fdcff, #ffffff, #ff4fa3);
     -webkit-background-clip: text;
     color: transparent;
-    /* text-shadow: 0 0 25px #4fdcff; */
+    text-align: center;
+
 }
 
 .game{
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    width: min(90vw, 300px);
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 25px;
     gap: 20px;
 }
 
 .box{
-    height: 15vmin;
-    width: 15vmin;
-    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 12px;
     border: none;
     background-color: white;
-    font-size: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: 0.5s;
 }
 
 :hover.box{
     background-color: rgb(224, 174, 219);
+    transform: scale(1.05);
 }
 
-:hover.reset{
-    background-color: rgb(224, 174, 219);
+.reset,
+.newGame{
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(71, 236, 192);
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-:hover.newGame{
+.newGame:hover,
+.reset:hover{
     background-color: rgb(224, 174, 219);
+    transform: scale(1.05);
 }
 
 .result{
-    /* min-height: 30vh; */
-    margin-top: 10px;
-    font-size: 55px;
+    font-size: 3rem;    
     background: linear-gradient(90deg, #f5e536, #ffffff, #58fd2b);
     -webkit-background-clip: text;
     color: transparent;
-}
-
-.newGame{
-    height: 8vmin;
-    width: 15vmin;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(71, 236, 192);
-}
-
-.reset{
-    height: 8vmin;
-    width: 15vmin;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(71, 236, 192);
+    text-align: center;
 }
 
 .msgContainer{
-    height: 100vmin;
+    min-height: 100vh;
+    display: none;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column ;
-    gap: 40px;
-    display: none;
+    gap: 30px;
 }
 
 
