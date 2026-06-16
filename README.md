@@ -1,2 +1,2 @@
 # Tic-Tac-Toe
-i build a tic tac tow game using html css and javaScript
+I build a tic tac toe game using html, css and javaScript.
